@@ -12,11 +12,95 @@
         list-style: none;
         padding-left: 0px;
         margin: 4px 0 0 0;
+        display: flex;
     }
     
     .header__navbar-item {
         margin: 0 8px;
         position: relative;
+    }
+    
+    .header__navbar-user {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .header__navbar-user:hover .header__navbar-user-menu {
+        display: block;
+    }
+    
+    .header__navbar-user-img {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .header__navbar-user-menu {
+        position: absolute;
+        z-index: 1;
+        padding-left: 0;
+        top: calc(100% + 6px);
+        right: 0;
+        background-color: var(--white-color);
+        border-radius: 2px;
+        width: 160px;
+        list-style: none;
+        box-shadow: 0 1px 2px #e0e0e0;
+        display: none;
+    }
+    
+    .header__navbar-user-menu::before {
+        position: absolute;
+        content: "";
+        border-width: 20px 23px;
+        border-style: solid;
+        border-color: transparent transparent var(--white-color) transparent;
+        right: 4px;
+        top: -34px;
+    }
+    
+    .header__navbar-user-menu::after {
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        margin-top: -140px;
+        margin-left: 0;
+        content: "";
+        display: block;
+    }
+    
+    .header__navbar-user-item--separate {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .header__navbar-user-item a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: var(--text-color);
+        display: block;
+        padding: 8px 16px;
+    }
+    
+    .header__navbar-user-item a:first-child {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    
+    .header__navbar-user-item a:last-child {
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    
+    .header__navbar-user-item a:hover {
+        background-color: #fafafa;
+    }
+    
+    .header__navbar-user-name {
+        margin-left: 4px;
+        font-size: 1.4rem;
+        font-weight: 400;
     }
     /* Hover: Hiện ra */
     
@@ -31,7 +115,7 @@
     .header__navbar-item,
     .header__navbar-item-link {
         display: inline-block;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         color: var(--white-color);
         text-decoration: none;
         font-weight: 400;
@@ -40,13 +124,17 @@
     .header__navbar-item,
     .header__navbar-item-link,
     .header__navbar-icon-link {
-        display: inline-block;
+        display: flex;
         align-items: center;
     }
     
     .header__navbar-icon-link {
         color: var(--white-color);
         text-decoration: none;
+    }
+    
+    .header__navbar-icon-link:nth-child(2) {
+        margin-left: 3px;
     }
     
     .header__navbar-item:hover,
@@ -82,6 +170,7 @@
         background-color: var(--white-color);
         width: 186px;
         position: absolute;
+        z-index: 1;
         left: 0;
         top: 118%;
         padding: 8px;
@@ -132,12 +221,14 @@
     
     .header__notify {
         position: absolute;
+        z-index: 1;
         width: 404px;
+        border-radius: 2px;
         top: 150%;
         background-color: var(--white-color);
         right: 0;
-        border: 1px solid #D3d3d3;
-        transform-origin: calc(100% - 20px) top;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transform-origin: calc(100% - 32px) top;
         animation: headerNotifyGrowth ease 0.25s;
         will-change: opacity, transform;
         display: none;
@@ -395,6 +486,11 @@
         width: 200px;
     }
     
+    .header__logo-link {
+        text-decoration: none;
+        color: transparent;
+    }
+    
     .header__logo-img {
         width: 150px;
     }
@@ -432,9 +528,105 @@
         right: 1px;
         background-color: var(--white-color);
         box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
-        display: none;
         animation: fadeIn ease-in .2s;
         cursor: default;
+        display: none;
+    }
+    /* Cart Item */
+    
+    .header__cart-heading {
+        text-align: left;
+        margin: 8px 0 8px 12px;
+        font-size: 1.4rem;
+        color: #999;
+        font-weight: 400;
+    }
+    
+    .header__cart-lists {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    .header__cart-lists-item {
+        align-items: center;
+        display: flex;
+    }
+    
+    .header__cart-lists-item:hover {
+        background-color: #f8f8f8;
+    }
+    
+    .header__cart-item-img {
+        width: 42px;
+        height: 42px;
+        margin: 12px;
+        border: 1px solid #e8e8e8;
+    }
+    
+    .header__cart-item-info {
+        width: 100%;
+        margin-right: 12px;
+    }
+    
+    .header__cart-item-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .header__cart-item-name {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin: 0;
+    }
+    
+    .header__cart-item-price {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--primary-color);
+    }
+    
+    .header__cart-item-multiply {
+        color: #757575;
+        font-size: .9rem;
+        margin: 0 4px;
+    }
+    
+    .header__cart-item-qnt {
+        color: #757575;
+        font-size: 1.2rem;
+    }
+    
+    .header__cart-item-body {
+        display: flex;
+        justify-content: space-between;
+        margin: 6px 0 0 0;
+    }
+    
+    .header__cart-item-description {
+        color: #757575;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    
+    .header__cart-item-remove {
+        color: var(--text-color);
+        font-size: 1.4rem;
+    }
+    
+    .header__cart-item-remove:hover {
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    
+    .header__cart-view-cart {
+        float: right;
+        margin: 0 12px 12px 0;
+    }
+    
+    .header__cart-view-cart:hover {
+        background-color: #f05d41;
     }
     
     .header__cart-list::after {
@@ -550,7 +742,7 @@
         position: absolute;
         padding-top: 8px;
         right: 0;
-        top: 100%;
+        top: calc(100% - 5px);
         width: 130px;
         list-style: none;
         box-shadow: 0 1px 2px #e0e0e0;
