@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+
+
 </head>
 
 <body>
@@ -271,17 +273,20 @@
         </header>
 
         <!-- Container -->
-        <div class="container">
+        <div class="app__container">
             <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row app__content">
                     <div class="grid__col-2">
                         <nav class="category">
                             <h3 class="category__heading">
-                                <i class="fa fa-list-ul"></i> Danh mục
+                                <i class="category__heading-icon fa fa-list-ul"></i> Danh mục
                             </h3>
 
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Sản phẩm Lamborghini</a>
+                                </li>
+                                <li class="category-item">
                                     <a href="#" class="category-item__link">Lamborghini Aventador</a>
                                 </li>
                                 <li class="category-item">
@@ -295,7 +300,39 @@
                     </div>
 
                     <div class="grid__col-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn btn--primary">Phổ biến</button>
+                            <button class="home-filter__btn btn">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
 
+                            <div class="select-input">
+                                <span class="select-input__label">Giá </span>
+                                <i class="select-input__icon fa fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__list-item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__list-item">
+                                        <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-number">
+                                    <span class="home-filter__page-current">1</span>/14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="#" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fa fa-angle-left"></i>
+                                    </a>
+                                    <a href="#" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
