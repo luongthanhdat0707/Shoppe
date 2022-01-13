@@ -482,16 +482,21 @@
     }
     
     .header__logo {
-        width: 200px;
+        width: 192px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-height: 78px;
     }
     
     .header__logo-link {
         text-decoration: none;
-        color: transparent;
+        display: block;
+        background-color: transparent;
     }
     
-    .header__logo-img {
-        width: 150px;
+    .header__logo-link-img {
+        width: 64px;
     }
     
     .header__search {
