@@ -1,10 +1,6 @@
 /* Mobie and Tablet */
 
 @media (max-width: 1023px) {
-     :root {
-        --header-height: 68px;
-        --navbar-height: 0px;
-    }
     .header {
         position: fixed;
         z-index: 10;
@@ -35,12 +31,31 @@
     .mobie-category {
         display: block;
     }
+    .nav__mobile-bars-btn {
+        display: block;
+    }
+    .nav__mobile {
+        top: var(--header-height);
+        height: 60vh;
+    }
+    .nav__mobile-close-btn {
+        top: 3.2rem;
+    }
+    .nav__mobie-icon-lose:hover,
+    .nav__mobile-link:hover {
+        color: var(--primary-color);
+        cursor: pointer;
+    }
 }
 
 
 /* Tablet */
 
 @media (min-width: 740px) and (max-width: 1023px) {
+     :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
     .hide-on-tablet {
         display: none;
     }
@@ -53,12 +68,19 @@
         height: 30px;
         width: 36px;
     }
+    .nav__mobile-bars-icon {
+        margin: 0 -48px;
+    }
 }
 
 
 /* Mobie */
 
 @media (max-width: 739px) {
+     :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
     .hide-on-mobie {
         display: none;
     }
@@ -79,7 +101,7 @@
         border: 1px solid #afa8a8;
         border-radius: 24px;
         position: fixed;
-        z-index: 1;
+        z-index: 10;
         top: var(--header-height);
         right: 0;
         left: 0;
@@ -129,5 +151,32 @@
     }
     .footer__content {
         padding: 0 16px;
+    }
+    .footer__list-item-link-active-none {
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer__list-item,
+    .footer__download {
+        justify-content: center;
+    }
+    .footer__download-apps-link {
+        display: block;
+        padding: 6px 8px;
+    }
+    .home-product-item__sale {
+        height: 42px;
+    }
+    .home-product-item__sale::after {
+        bottom: -3px;
+    }
+    .home-product-item__sale-label {
+        line-height: 1rem;
     }
 }

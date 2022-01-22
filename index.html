@@ -137,9 +137,48 @@
 
                 <!-- Tìm kiếm -->
                 <div class="header-with-search">
-                    <label for="mobie-search-checkbox" class="header__mobie-search">
-                        <i class="header__mobie-search-icon fa fa-search"></i>
-                    </label>
+
+                    <!-- Mobie and Tablet -->
+                    <div class="nav__mobile-wrap">
+                        <label for="nav__mobile-input" class="nav__mobile-bars-btn">
+                            <i class="nav__mobile-bars-icon fa fa-bars"></i>
+                        </label>
+
+                        <input type="checkbox" hidden name="" id="nav__mobile-input" class="nav__input">
+
+                        <label for="nav__mobile-input" class="nav__overlay"></label>
+
+                        <nav class="nav__mobile">
+                            <label for="nav__mobile-input" class="nav__mobile-close-btn">
+                                <i class="nav__mobie-icon-lose fa fa-times"></i>
+                            </label>
+
+                            <ul class="nav__mobile-list">
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Home</a>
+                                </li>
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Thông báo</a>
+                                </li>
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Hàng hóa đã mua</a>
+                                </li>
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Hàng hóa đã thích</a>
+                                </li>
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Đăng nhập</a>
+                                </li>
+                                <li class="nav__mobila-link">
+                                    <a href="" class="nav__mobile-link">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <label for="mobie-search-checkbox" class="header__mobie-search">
+                            <i class="header__mobie-search-icon fa fa-search"></i>
+                        </label>
+                    </div>
+
                     <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <img class="header__logo-link-img " src="./assets/img/thanhdat.png" alt="">
@@ -888,7 +927,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4 m-4 c-7">
+                <div class="col l-2-4 m-4 c-6">
                     <h3 class="footer__heading">Hệ thống cừa hàng</h3>
                     <ul class="footer__list">
                         <li class="footer__list-item ">
@@ -924,7 +963,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4 m-8 c-6">
+                <div class="col l-2-4 m-8 c-12">
                     <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                     <div class="footer__download">
                         <img src="./assets/img/QRcode.png" alt="Download QR" class="footer__download-qr">
